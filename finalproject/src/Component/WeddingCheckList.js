@@ -6,7 +6,7 @@ class WeddingCheckList extends React.Component {
     super(props)
 
     this.state = {
-      check1: false,
+      check1: false, id:1,
       check2: false,
       check3: false,
       check4: false,
@@ -43,22 +43,30 @@ class WeddingCheckList extends React.Component {
       check35: false
     }
     this.onCheckChange= this.onCheckChange.bind(this)
+  
   }
 
 
- onCheckChange(e){
+ onCheckChange (e){
    console.log(e.target.checked)
    this.setState({
      [e.target.name]: e.target.checked
+
    })
  }
+
+clicked (txt){
+ console.log(txt)
+ }
+
+
   render() {
     return (
       <div>
         <h1>12+ MONTHS</h1>
         <h3>No worries, you got this!</h3>
-        <input type="checkbox" name="check1" checked={this.state.check1} onChange={this.onCheckChange} /> Talk budget and decide. <br />
-        <input type="checkbox" name="check2" checked={this.state.check2} onChange={this.onCheckChange} /> Discover your wedding style. <br />
+        <input type="checkbox" name="check1" checked={this.state.check1} onChange={this.onCheckChange} /> Talk budget and decide. <button onClick={(e) => {this.clicked('hey');}} >X</button><br />
+        <input type="checkbox" name="check2" checked={this.state.check2} onChange={this.onCheckChange} /> Discover your wedding style.<button onClick={(e) => {this.clicked('hey');}}>X</button><br /> 
         <input type="checkbox" name="check3" checked={this.state.check3} onChange={this.onCheckChange} /> Choose wedding party: Maid of Honor and Bridesmaids, Best Man and Groomsmen, Flower Girl and Ring Bearer. <br />
         <input type="checkbox" name="check4" checked={this.state.check4} onChange={this.onCheckChange} /> Get engagement ring insured and consider purchasing wedding insurance. <br />
         <input type="checkbox" name="check5" checked={this.state.check5} onChange={this.onCheckChange} /> Explore ceremony and reception venue options. <br />
