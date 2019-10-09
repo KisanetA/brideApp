@@ -1,5 +1,5 @@
 import React from "react";
-import './WeddingCheckList.css';
+
 import friends from './Images/friends.jpg'
 import cake from './Images/cake.jpg'
 import guessList from './Images/guessList.jpg'
@@ -8,16 +8,29 @@ import savedate from './Images/savedate.jpg'
 import final from './Images/final.jpg'
 import vows from './Images/vows.jpg'
 import venues from './Images/venues.jpg';
-import Background from './Background'
+import Particles from 'react-particles-js';
+// import Background from './Background'
+// import './WeddingCheckList.css';
 
-
+const particleOpt = {
+  particles: {
+    number: {
+      value: 150,
+      density: {
+        enable: true,
+        value_area: 300,
+        
+      }
+    }
+  }
+}
 
 class WeddingCheckList extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      id: 1, check1: false,
+      check1: false,
       check2: false,
       check3: false,
       check4: false,
@@ -74,7 +87,12 @@ class WeddingCheckList extends React.Component {
   render() {
     return (
       <div>
-       
+            
+               <Particles
+    params={particleOpt}
+  />  
+    
+    
         <div id="hey" className="col-md-12">
           <h1>12+ MONTHS</h1>
           <h3>No worries, you got this!</h3> <br />
@@ -182,7 +200,11 @@ class WeddingCheckList extends React.Component {
             <input type="checkbox" name="check35" checked={this.state.check35} onChange={this.onCheckChange} /> Final dress fitting (with shoes &amp; undergarments).<br />
           </div>
         </div>
-        <Background></Background>
+        
+        <Particles
+    params={particleOpt}
+  />  
+      
       </div>
     );
 

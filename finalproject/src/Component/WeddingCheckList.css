@@ -16,3 +16,14 @@ img{
     
 }
 
+body{
+    color: white;
+    background: rgb(2, 2, 51);
+}
+
+canvas{
+    height: 200px;
+    width: 200px;
+
+}
+
