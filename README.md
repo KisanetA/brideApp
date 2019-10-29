@@ -15,7 +15,7 @@ BrideApp is a web application that help users plan a wedding using the basic too
     * React
     
 
-![Bride-App ](/public/images/Bride.png)
+![Bride-App](/finalproject/public/images/Bride.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
