@@ -13,6 +13,7 @@ BrideApp is a web application that help users plan a wedding using the basic too
     * Bootstrap
     * Node.js
     * React
+    * Heroku
     
 
 ![Bride-App](/Bride.png)
